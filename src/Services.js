@@ -9,7 +9,7 @@ import {
 import React from "react";
 import Card from "./components/Card";
 
-export default function Sercives() {
+export default function Services() {
   return (
     <ScrollView style={{ flex: 1 }}>
       <View style={{ backgroundColor: "white", padding: 20 }}>
