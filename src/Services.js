@@ -8,6 +8,11 @@ import {
 } from "react-native";
 import React from "react";
 import Card from "./components/Card";
+import AntDesign from "@expo/vector-icons/AntDesign";
+import Entypo from "@expo/vector-icons/Entypo";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 
 export default function Services() {
   return (
@@ -29,7 +34,7 @@ export default function Services() {
             >
               Ride
             </Text>
-            <Image source={require("../assets/car.png")}></Image>
+            <FontAwesome6 name="car-side" size={44} color="black" />
           </TouchableOpacity>
           <TouchableOpacity style={styles.bigContainers}>
             <Text
@@ -40,20 +45,65 @@ export default function Services() {
             >
               Package
             </Text>
-            <Image source={require("../assets/car.png")}></Image>
+            <MaterialCommunityIcons name="package" size={50} color="black" />
           </TouchableOpacity>
         </View>
         <View style={{ paddingTop: 20, flexDirection: "row", gap: 10 }}>
-          <Card title="Reserve" />
-          <Card title="Hourly" />
-          <Card title="Rent" />
-          <Card title="2-Wheels" />
+          <Card
+            title="Reserve"
+            icon={<AntDesign name="calendar" size={36} color="black" />}
+          />
+          <Card
+            title="Hourly"
+            icon={<Entypo name="clock" size={36} color="black" />}
+          />
+          <Card
+            title="Rent"
+            icon={
+              <MaterialCommunityIcons name="car-key" size={36} color="black" />
+            }
+          />
+
+          <Card
+            title="2-Wheels"
+            icon={<MaterialIcons name="motorcycle" size={36} color="black" />}
+          />
         </View>
         <View style={{ paddingTop: 6, flexDirection: "row", gap: 10 }}>
-          <Card title="Transit" />
-          <Card title="Charter" />
-          <Card title="Explore" />
-          <Card title="Travel" />
+          <Card
+            title="Transit"
+            icon={
+              <MaterialIcons
+                name="directions-transit"
+                size={36}
+                color="black"
+              />
+            }
+          />
+          <Card
+            title="Charter"
+            icon={
+              <MaterialCommunityIcons
+                name="truck-minus"
+                size={36}
+                color="black"
+              />
+            }
+          />
+          <Card
+            title="Explore"
+            icon={
+              <MaterialCommunityIcons
+                name="rocket-launch"
+                size={36}
+                color="black"
+              />
+            }
+          />
+          <Card
+            title="Travel"
+            icon={<MaterialIcons name="luggage" size={36} color="black" />}
+          />
         </View>
       </View>
       <View style={{ backgroundColor: "white", padding: 20, marginTop: 10 }}>
@@ -70,7 +120,7 @@ export default function Services() {
             >
               Restaurant
             </Text>
-            <Image source={require("../assets/car.png")}></Image>
+            <FontAwesome6 name="bowl-food" size={44} color="black" />
           </View>
           <View style={styles.bigContainers}>
             <Text
@@ -81,20 +131,65 @@ export default function Services() {
             >
               Grocery
             </Text>
-            <Image source={require("../assets/car.png")}></Image>
+            <Entypo name="shopping-cart" size={50} color="black" />
           </View>
         </View>
         <View style={{ paddingTop: 20, flexDirection: "row", gap: 10 }}>
-          <Card title="Reserve" />
-          <Card title="Hourly" />
-          <Card title="Rent" />
-          <Card title="2-Wheels" />
+          <Card
+            title="Reserve"
+            icon={<AntDesign name="calendar" size={36} color="black" />}
+          />
+          <Card
+            title="Hourly"
+            icon={<Entypo name="clock" size={36} color="black" />}
+          />
+          <Card
+            title="Rent"
+            icon={
+              <MaterialCommunityIcons name="car-key" size={36} color="black" />
+            }
+          />
+
+          <Card
+            title="2-Wheels"
+            icon={<MaterialIcons name="motorcycle" size={36} color="black" />}
+          />
         </View>
         <View style={{ paddingTop: 6, flexDirection: "row", gap: 10 }}>
-          <Card title="Transit" />
-          <Card title="Charter" />
-          <Card title="Explore" />
-          <Card title="Travel" />
+          <Card
+            title="Transit"
+            icon={
+              <MaterialIcons
+                name="directions-transit"
+                size={36}
+                color="black"
+              />
+            }
+          />
+          <Card
+            title="Charter"
+            icon={
+              <MaterialCommunityIcons
+                name="truck-minus"
+                size={36}
+                color="black"
+              />
+            }
+          />
+          <Card
+            title="Explore"
+            icon={
+              <MaterialCommunityIcons
+                name="rocket-launch"
+                size={36}
+                color="black"
+              />
+            }
+          />
+          <Card
+            title="Travel"
+            icon={<MaterialIcons name="luggage" size={36} color="black" />}
+          />
         </View>
       </View>
     </ScrollView>

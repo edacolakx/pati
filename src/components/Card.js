@@ -23,7 +23,7 @@ export default function Card(props) {
           borderRadius: 10,
         }}
       >
-        <Image source={require(`../../assets/favicon.png`)}></Image>
+        {props.icon}
       </View>
       <Text
         style={{

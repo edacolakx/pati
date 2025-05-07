@@ -17,6 +17,7 @@ import Carousel from "react-native-reanimated-carousel";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import Entypo from "@expo/vector-icons/Entypo";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
 export default function HomePage() {
   const [page, setPage] = useState("Rides");
@@ -24,9 +25,8 @@ export default function HomePage() {
   const [savedHome, setSavedHome] = useState(true);
   const width = Dimensions.get("window").width;
   const data = [
-    require("../assets/favicon.png"),
-    require("../assets/favicon.png"),
-    require("../assets/favicon.png"),
+    require("../assets/first.jpg"),
+    require("../assets/second.jpg"),
   ];
   return (
     <ScrollView style={{ flex: 1 }}>
@@ -208,13 +208,39 @@ export default function HomePage() {
               Suggestions
             </Text>
 
-            <View style={{ flexDirection: "row", gap: 10, marginTop: 10 }}>
-              <Card title="Transit" />
-              <Card title="Charter" />
-              <Card title="Explore" />
-              <Card title="Travel" />
+            <View style={{ paddingTop: 6, flexDirection: "row", gap: 10 }}>
+              <Card
+                title="Ride"
+                icon={<FontAwesome6 name="car-side" size={36} color="black" />}
+              />
+              <Card
+                title="Package"
+                icon={
+                  <MaterialCommunityIcons
+                    name="package"
+                    size={36}
+                    color="black"
+                  />
+                }
+              />
+              <Card
+                title="Reserve"
+                icon={<AntDesign name="calendar" size={36} color="black" />}
+              />
+              <Card
+                title="Rent"
+                icon={
+                  <MaterialCommunityIcons
+                    name="car-key"
+                    size={36}
+                    color="black"
+                  />
+                }
+              />
             </View>
-            <Text style={{ fontWeight: "bold", fontSize: 20, marginTop: 20 }}>
+            <Text
+              style={{ fontWeight: "bold", fontSize: 20, marginVertical: 20 }}
+            >
               Ways to plan with Uber
             </Text>
 
@@ -230,7 +256,7 @@ export default function HomePage() {
                   <Image
                     source={item}
                     style={{ width: "100%", height: "100%", borderRadius: 10 }}
-                    resizeMode="center"
+                    resizeMode="cover"
                   />
                 </View>
               )}
